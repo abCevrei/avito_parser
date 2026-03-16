@@ -12,11 +12,11 @@ import random
 
 load_dotenv()
 
+# Railway сам дает переменные окружения
 # ========== НАСТРОЙКИ ==========
-TELEGRAM_BOT_TOKEN = os.getenv("TG_TOKEN")
-TELEGRAM_CHAT_ID = os.getenv("TG_CHAT_ID")
-
-# ВАША ссылка (скопирована с Avito)
+TELEGRAM_BOT_TOKEN = os.environ.get("TG_TOKEN")
+TELEGRAM_CHAT_ID = os.environ.get("TG_CHAT_ID")
+AVITO_URL = os.environ.get("AVITO_URL")
 AVITO_URL = "https://www.avito.ru/bashkortostan/avtomobili/do-400000-rubley-ASgCAgECAUXGmgwWeyJmcm9tIjowLCJ0byI6NDAwMDAwfQ?f=ASgBAgECA0SeEqaqjQP2xA2~sDrs6hSSmZADAkX~KRl7ImZyb20iOm51bGwsInRvIjoxODAwMDB9xpoMFnsiZnvbSI6MCwidG8iOjQwMDAwMH0&localPriority=0"
 
 SEEN_FILE = "seen_cars.json"
